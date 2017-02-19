@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+
+    <title>PyPI Package Count</title>
+
+    {{ js_resources|indent(4)|safe }}
+
+    {{ css_resources|indent(4)|safe }}
+
+    {{ plot_script|indent(4)|safe }}
+
+  </head>
+  <body>
+      <h1>At what datetime UTC will <a href="https://pypi.python.org/pypi"
+      target="_blank">PyPI</a> have 100k packages?</h1>
+      <p>100,000 PyPI packages currently predicted to occur at <b>{{ predicted_time }}</b> UTC.</p>
+    {{ plot_div|indent(4)|safe }}
+	<p>Data Sources: <a href="https://pypi.python.org/pypi" target="_blank">PyPI website</a> for data starting 2017-02-11; <a href="http://web.archive.org/web/*/pypi.python.org" target="_blank">Archive.org</a> for data prior to 2017-02-11.
+  </body>
+</html>
