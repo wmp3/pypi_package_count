@@ -32,7 +32,7 @@ def package_count(predicted_time=None):
     css_resources = INLINE.render_css()
 
     df = forecast.get_data()
-    fig = plot.make_bokeh_plot_canvas(df=df, predicted_timestamp=None, window=7)
+    fig = plot.make_bokeh_plot_canvas(df=df, predicted_timestamp=predicted_time, window=7)
 
     script, div = components(fig)
 
